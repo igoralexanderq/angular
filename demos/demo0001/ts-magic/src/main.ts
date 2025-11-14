@@ -1,4 +1,4 @@
-
+/*
 
 import type types = require("./core/types");
 
@@ -26,3 +26,14 @@ class Persona {
 const p = crearInstancia(Persona, "Alice");
 
 console.log(p);
+*/
+
+/*
+import { Container } from "./core/container";
+
+const service = Container.get<{ execute: (n: string) => string }>("GreetingService");
+console.log(service.execute("Igor"));
+console.log(1);
+
+*/
+console.log("TS-Magic running!");
