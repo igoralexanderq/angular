@@ -9,3 +9,10 @@ export class GreetingService implements Service {
         return `Hola ${name} 👋 desde TypeScript mágico ✨`;
     }
 }
+
+@Injectable()
+export class FarewellService implements Service {
+    execute(name: string): string {
+        return `Adiós ${name} 👋 hasta luego!`;
+    }   
+}
