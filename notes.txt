@@ -9,7 +9,11 @@ npm install typescript --save-dev
 npx tsc --init
 
 npm install nodemon -g
+npm install --save-dev ts-node nodemon @types/node
 
 
+npm run dev
+
+#
 demo0002
 --------------------------------------------------------------------------------------------------------
