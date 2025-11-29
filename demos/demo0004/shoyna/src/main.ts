@@ -62,7 +62,7 @@ function Required(target: any, propertyKey: string) {
             return requiredValues.get(this);
         }, 
         set(value: any) {
-            console.log(propertyKey, value);
+            //console.log(propertyKey, value);
             if(value === null || value === undefined) {
                 throw new Error(`❌ La propiedad "${propertyKey}" es requerida.`);
             }
@@ -113,5 +113,21 @@ export class UserService {
     }
 }
 
-const x = new UserService();
+//const x = new UserService();
+//x.getUserById(19);
 //x.apiUrl = null;
+
+
+//function <T extends { new (...args: any[]): {} }> (constructor: T)
+
+function wrapInResponse<T> (data: T) {
+    return {
+        ok: true,
+        timestamp: Date.now(),
+        data
+    };
+}
+
+console.log(wrapInResponse(10));
+console.log(wrapInResponse({ id: 1, name: 'Alexander' }));
+console.log(wrapInResponse(['a', 'b', 'c']));
